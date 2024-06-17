@@ -16,3 +16,8 @@ set(TEST_MATH ${DIR_SRCS})
 # 添加要编译的可执行文件
 add_executable(${PROJECT_NAME} ${TEST_MATH})
 target_link_libraries(${PROJECT_NAME})
+
+# 编译指令
+# cmake -B build
+# cd build 
+# make

@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 # 指定项目的名称，一般和项目的文件夹名称对应
-project(socket_client_local)
+project(pipe)
 
 # 源文件目录
 aux_source_directory(. DIR_SRCS)
