@@ -12,5 +12,6 @@ SRCREV = "${AUTOREV}"
 S = "${WORKDIR}"
 
 do_install() {
-    cp ${S}/*.ko ${THISDIR} -rf
+    cp ${S}/*.ko ${THISDIR}/files/ -rf
 }
+

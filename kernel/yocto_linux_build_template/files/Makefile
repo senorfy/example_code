@@ -1,10 +1,12 @@
-obj-m := test.o
+export c_files ?= $(wildcard *.c)
+o_files = $(c_files:.c=.o)
+obj-m := $(o_files)
 
 SRC := $(shell pwd)
 
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
-
+	
 modules_install:
 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
 
@@ -12,7 +14,3 @@ clean:
 	rm -f *.o *~ core .depend .*.cmd *.ko *.mod.c
 	rm -f Module.markers Module.symvers modules.order
 	rm -rf .tmp_versions Modules.symvers
-		
-		
-
-
